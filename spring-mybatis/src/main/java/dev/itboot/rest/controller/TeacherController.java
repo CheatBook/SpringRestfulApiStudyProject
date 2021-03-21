@@ -43,7 +43,7 @@ public class TeacherController {
     @GetMapping("/edit/{id}")
     public String editTeacher(@PathVariable Long id, Model model) {
         model.addAttribute("teacher", service.findById(id));
-        return "from";
+        return "form";
     }
 
     @GetMapping("/delete/{id}")
