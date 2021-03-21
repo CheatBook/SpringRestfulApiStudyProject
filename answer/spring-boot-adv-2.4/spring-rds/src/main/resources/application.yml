@@ -1,0 +1,18 @@
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: dev.itboot.mb.model
+server:
+  port: 5000
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    initialization-mode: always
+    url: jdbc:postgresql://エンドポイント:5432/testdb
+    username: postgres
+    password: マスターパスワード
+server:
+  port: 9000

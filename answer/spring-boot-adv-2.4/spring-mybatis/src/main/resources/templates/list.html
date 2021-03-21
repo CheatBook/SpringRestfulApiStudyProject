@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <th:block th:insert="fragments/base :: header"></th:block>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h4>MyBatis APP</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>名前</th>
+          <th>E-Mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="teacher : ${page}" th:object="${teacher}">
+          <td th:text="*{id}"></td>
+          <td th:text="*{userName}"></td>
+          <td th:text="*{email}"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <th:block th:insert="fragments/base :: scripts"></th:block>
+</body>
+
+</html>
