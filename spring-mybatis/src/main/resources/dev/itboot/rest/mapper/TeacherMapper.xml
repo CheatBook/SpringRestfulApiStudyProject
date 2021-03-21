@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dev.itboot.rest.mapper.TeacherMapper">
+  <select id="selectAll" resultType="Tacher">
+    Select * from teacher
+  </select>
+
+  <select id="selectByPrimaryKey" resultType="Teacher">
+    Select * From teacher
+    Where id = #{id}
+  </select>
+
+  <insert id="insert">
+    Insert Into teacher(user_name, email)
+    Values(#{userName}, #{email})
+  </insert>
+
+  <updeate id="updateByPrimaryKey">
+    Update teacher
+    Set user_name = #{userName}, email = #{email}
+    Where id = #{id}
+  </update>
+
+  <delete id="deleteByPrimaryKey">
+    Delete From teacher
+    Where id = #{id}
+  </delete>
+
+
+</mapper>
