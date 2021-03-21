@@ -6,3 +6,4 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+  type-aliases-package: dev.itboot.rest.model
