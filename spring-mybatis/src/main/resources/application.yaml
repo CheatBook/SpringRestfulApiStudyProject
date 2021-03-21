@@ -1,3 +1,8 @@
 spring:
   datasource:
     initialization-mode: always
+    
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
