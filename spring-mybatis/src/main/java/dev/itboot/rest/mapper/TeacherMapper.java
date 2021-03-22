@@ -9,7 +9,7 @@ import dev.itboot.rest.model.Teacher;
 @Mapper
 public interface TeacherMapper {
 
-//    @Select("select * from teacher")
+    Long count();
     List<Teacher> selectAll();
 
 //    @Select({ "Select * From teacher", "Where id = #{id}" })
@@ -23,4 +23,5 @@ public interface TeacherMapper {
 
 //    @Delete({ "Delete from teacher", "Where id = #{id}" })
     int deleteByPrimaryKey(Long id);
+
 }

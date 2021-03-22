@@ -18,6 +18,7 @@ public class TeacherService {
     
     public List<Teacher> findAll() {
         return mapper.selectAll();
+        Long total = mapper.count();
     }
     
     public Teacher findById(Long id ) {
