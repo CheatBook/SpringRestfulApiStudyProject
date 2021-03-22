@@ -3,6 +3,7 @@ package dev.itboot.rest.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.session.RowBounds;
 
 import dev.itboot.rest.model.Teacher;
 
@@ -10,7 +11,9 @@ import dev.itboot.rest.model.Teacher;
 public interface TeacherMapper {
 
     Long count();
-    List<Teacher> selectAll();
+
+    // @Select("select * from teacher")
+    List<Teacher> selectAll(RowBounds rowBounds);
 
 //    @Select({ "Select * From teacher", "Where id = #{id}" })
     Teacher selectByPrimaryKey(Long id);
