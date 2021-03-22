@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+    <th:block th:fragment="pagination">
+        <div th:if="${page.totalPages > 0}" class="col-auto">
+            <nav>
+                <ul class="pagination">
+                    <li th:if="${page.hasPrevious()}" class="page-item">
+                        <a class="page-link" th:href="@{//(page=${page.number - 1})}">
+                        前へ
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <div>
+    </th:block>
+</body>
+</html>

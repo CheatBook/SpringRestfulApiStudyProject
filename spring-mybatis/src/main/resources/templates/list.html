@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <h4>MyBatis APP</h4>
 
-    <table class="table">
+    <table th:if="${page.totalPages > 0}" class="table">
       <thead>
         <tr>
           <th>#</th>
@@ -47,6 +47,9 @@
         </a>
       </div>
     </div>
+    
+    <th:block th:insert="fragments/pagination :: pagination">
+    </th:block>
 
   </div>
 
