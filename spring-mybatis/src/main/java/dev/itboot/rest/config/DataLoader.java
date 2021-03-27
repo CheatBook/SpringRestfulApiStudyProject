@@ -14,7 +14,7 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 5; i++) {
             Teacher teacher = new Teacher();
             teacher.setUserName("テスト");
             teacher.setEmail("test@example.com");
